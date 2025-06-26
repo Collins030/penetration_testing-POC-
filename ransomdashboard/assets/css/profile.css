@@ -1,0 +1,276 @@
+/* Profile Management CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.profile-management {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-management h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-container label {
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"],
+.input-container input[type="file"] {
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="password"]:focus,
+.input-container input[type="file"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+/* File Input Styling */
+.input-container input[type="file"] {
+    padding: 12px;
+    border-style: dashed;
+    border-color: #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+.input-container input[type="file"]:hover {
+    background-color: #e9ecef;
+    border-color: #667eea;
+}
+
+/* Profile Picture Display */
+.input-container img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #fff;
+}
+
+/* Checkbox Styling */
+.input-container input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    accent-color: #667eea;
+}
+
+.input-container label:has(input[type="checkbox"]) {
+    flex-direction: row;
+    align-items: center;
+    font-weight: normal;
+    text-transform: none;
+    letter-spacing: normal;
+    cursor: pointer;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+input[type="submit"]:active {
+    transform: translateY(-1px);
+}
+
+/* Back to Dashboard Link */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+    border: none;
+}
+
+.btn-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(23, 162, 184, 0.3);
+    background: linear-gradient(135deg, #138496, #117a8b);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-management {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .profile-management h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .input-container input[type="text"],
+    .input-container input[type="password"],
+    .input-container input[type="file"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    input[type="submit"] {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .profile-management {
+        padding: 20px 15px;
+    }
+    
+    .profile-management h3 {
+        font-size: 1.3rem;
+    }
+    
+    .input-container img {
+        width: 80px;
+        height: auto;
+    }
+}
+
+/* Animation for form elements */
+.input-container {
+    animation: slideInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.input-container:nth-child(1) { animation-delay: 0.1s; }
+.input-container:nth-child(2) { animation-delay: 0.2s; }
+.input-container:nth-child(3) { animation-delay: 0.3s; }
+.input-container:nth-child(4) { animation-delay: 0.4s; }
+
+input[type="submit"] {
+    animation: slideInUp 0.6s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.btn {
+    animation: slideInUp 0.6s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading states */
+.input-container input:disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Focus visible for accessibility */
+input:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}

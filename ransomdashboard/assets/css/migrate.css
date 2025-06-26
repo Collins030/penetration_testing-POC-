@@ -1,0 +1,47 @@
+/* File: migrate.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 20px;
+    color: #333;
+}
+
+.message {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.message.success {
+    background-color: #e6ffed;
+    border: 1px solid #2ecc71;
+    color: #27ae60;
+}
+
+.message.error {
+    background-color: #ffecec;
+    border: 1px solid #e74c3c;
+    color: #c0392b;
+}
+
+.message.info {
+    background-color: #e8f4fd;
+    border: 1px solid #3498db;
+    color: #2980b9;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
