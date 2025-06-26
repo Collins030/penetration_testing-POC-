@@ -55,9 +55,9 @@ SECONDARY_TERMINATION_KEY = "stop"
 HOME_DIR = os.path.expanduser('~')
 TIME_DIR = os.path.join(HOME_DIR, '.cryptolock_time')
 TIMER_STATE_FILE = os.path.join(TIME_DIR, 'timer_state.txt')
-ICON_PATH = resource_path("D:/ransomware/elogo.png")
-LOGO_PATH = resource_path("D:/ransomware/elogo.png")
-THANKS_PATH = resource_path("D:/ransomware/thankyou.png")
+ICON_PATH = resource_path("image/elogo.png")
+LOGO_PATH = resource_path("image/elogo.png")
+THANKS_PATH = resource_path("image/thankyou.png")
 
 # Step 4: Ensure the time directory exists at the start
 ensure_time_dir_exists()
